@@ -1,0 +1,152 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 70px;
+  padding: 0;
+  font-family: "Lato", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+  color: rgb(74, 167, 227);
+}
+nav {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #3b4044;
+  padding: 15px 15px 16px 15px;
+}
+nav span {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+nav > div {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+nav > div > div > a {
+  color: white;
+  display: inline-block;
+  margin: 5px 0 0 0;
+  padding: 0px 15px;
+  font-weight: 600;
+}
+
+nav > div > div > a:hover {
+  padding-bottom: 5px;
+  border-bottom: 3px solid white;
+}
+
+.card {
+  margin: 15px 0;
+  list-style-type: decimal;
+  border: 1px solid grey;
+  width: 20%;
+}
+.card > h3 {
+  margin: 10px 0 8px 0;
+  text-align: center;
+}
+.card > ol {
+  margin-top: 10px;
+  padding-left: 35px;
+  line-height: 160%;
+  font-size: 15px;
+}
+.card a {
+  color: #3ca1e4;
+  margin-left: 6px;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+h1 {
+  font-weight: 620;
+  border-bottom: 1px solid rgb(196, 189, 189);
+  padding-bottom: 4px;
+}
+h2 {
+  font-weight: 620;
+  margin: 15px 0 0 0;
+}
+h3 {
+  font-weight: 620;
+}
+p {
+  margin: 7px 0;
+}
+.seg {
+  margin: 20px 0px;
+}
+#marquee {
+  width: 88vw;
+  height: 400px;
+  overflow: hidden;
+}
+#marquee img {
+  width: 88vw;
+}
+#right,
+#left {
+  aspect-ratio: 1;
+  width: 30px;
+  opacity: 50%;
+  z-index: 1000;
+}
+#left {
+  position: absolute;
+  top: 340px;
+  left: 70px;
+}
+#right {
+  position: absolute;
+  top: 340px;
+  left: 1165px;
+}
+#colorCards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 375px;
+}
+#colorCards > div {
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  box-shadow: -1px 14px 42px -22px rgba(0, 0, 0, 0.79);
+  -webkit-box-shadow: -1px 14px 42px -22px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: -1px 14px 42px -22px rgba(0, 0, 0, 0.79);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 210px;
+  height: 110px;
+  letter-spacing: 1px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 540;
+  font-size: 20px;
+  background-color: #495057;
+  color: white;
+}
+
+/* #colorCards > div:nth-child(5n-4) {
+  background-color: rgb(76, 146, 187);
+}
+
+#colorCards > div:nth-child(5n-3) {
+  background-color: rgb(222, 53, 76);
+}
+#colorCards > div:nth-child(5n) {
+  background-color: rgb(97, 177, 90);
+}
+#colorCards > div:nth-child(5n-1) {
+  background-color: goldenrod;
+}
+#colorCards > div:nth-child(5n-2) {
+  background-color: #f4a261;
+} */
