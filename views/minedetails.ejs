@@ -17,23 +17,27 @@
             <li><a href="#sources">Articles and Sources</a></li>
         </ol>
     </div>
+
     <div class="seg" id="location">
         <h1>Location</h1>
         <p>The satellite image below shows the area of the mine in <%= mine.location %>
         </p>
-
+        <div id='map'></div>
     </div>
+
     <div class="seg" id="background">
         <h1>Background on Mine</h1>
         <p>
             <%= mine.background%>
         </p>
     </div>
+
     <div class="seg" id="details">
         <h1>Mine Details</h1>
-        <ul id="detailsid">
+        <ul id="ulmargin">
             <% for(let i in mine){ %>
-                <% if(i=='id' || i=='photos' || i=="geoDetail" || i=="background" )continue %>
+                <% if(i=='id' || i=='photos' || i=="geoDetail" || i=="background" || i=="url" ||i=="lat" || i=="long"
+                    )continue %>
                     <li> <b>
                             <%=i%>:
                         </b>
@@ -42,6 +46,52 @@
                     <% } %>
         </ul>
     </div>
+
+    <div class="seg" id="sources">
+        <h1>Articles and Sources</h1>
+        <ul>
+            <% for(let i in mine.url){ %>
+                <li> <a href="<%=mine.url[i]%>" target="_blank">
+                        <%=i%>
+                    </a></li>
+                <% } %>
+        </ul>
+    </div>
+    <script>
+        function mapContent() {
+            var api_key = 'WikGMXv7qoJhlJj2Ba3Ka60TTpWc2Fwq';
+            var latAndLong = { lat: '<%- mine.lat %>', lng: '<%- mine.long%>' };
+            var zoomLevel = 14;
+            var yourAddress = '<%- mine.name %>';
+
+            var map = tt.map({
+                container: 'map',
+                key: api_key,
+                center: latAndLong,
+                zoom: zoomLevel
+            });
+
+            var marker = new tt.Marker().setLngLat(latAndLong).addTo(map);
+
+            // FOR CUSTOM MARKER
+            //var customMarker = document.createElement('div');
+            //customMarker.id = 'marker';
+            //var marker = new tt.Marker({element: customMarker}).setLngLat(latAndLong).addTo(map);
+
+            var popupOffsets = {
+                top: [0, 0],
+                bottom: [0, -70],
+                'bottom-right': [0, -70],
+                'bottom-left': [0, -70],
+                left: [25, -35],
+                right: [-25, -35]
+            }
+
+            var popup = new tt.Popup({ offset: popupOffsets }).setHTML(yourAddress);
+            marker.setPopup(popup).togglePopup();
+
+        }
+    </script>
     </body>
 
     </html>

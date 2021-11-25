@@ -134,6 +134,30 @@ p {
   color: white;
 }
 
+ul {
+  line-height: 25px;
+}
+
+/* ================ FOR MAPS ============================= */
+#map {
+  height: 500px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  #map {
+    height: 300px;
+  }
+}
+
+#marker {
+  background-image: url("/wp-content/uploads/2021/04/copywriter-logo-dark.svg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
 /* #colorCards > div:nth-child(5n-4) {
   background-color: rgb(76, 146, 187);
 }
