@@ -1,0 +1,47 @@
+<%- include('nav',{title:`${mine.name}`}) %>
+
+    <div class="seg">
+        <h1>
+            <%=mine.name%>
+        </h1>
+        <p>
+            <%=mine.geoDetail%>
+        </p>
+    </div>
+    <div class="card">
+        <h3>Contents</h3>
+        <ol>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#background">Background on Mine</a></li>
+            <li><a href="#details">Mine Details</a></li>
+            <li><a href="#sources">Articles and Sources</a></li>
+        </ol>
+    </div>
+    <div class="seg" id="location">
+        <h1>Location</h1>
+        <p>The satellite image below shows the area of the mine in <%= mine.location %>
+        </p>
+
+    </div>
+    <div class="seg" id="background">
+        <h1>Background on Mine</h1>
+        <p>
+            <%= mine.background%>
+        </p>
+    </div>
+    <div class="seg" id="details">
+        <h1>Mine Details</h1>
+        <ul id="detailsid">
+            <% for(let i in mine){ %>
+                <% if(i=='id' || i=='photos' || i=="geoDetail" || i=="background" )continue %>
+                    <li> <b>
+                            <%=i%>:
+                        </b>
+                        <%=mine[i]%>
+                    </li>
+                    <% } %>
+        </ul>
+    </div>
+    </body>
+
+    </html>
