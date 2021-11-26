@@ -1,8 +1,8 @@
-<%- include('nav',{title:`${mine.name}`}) %>
+<%- include('nav',{title:`${mine.Name}`}) %>
 
     <div class="seg">
         <h1>
-            <%=mine.name%>
+            <%=mine.Name%>
         </h1>
         <p>
             <%=mine.geoDetail%>
@@ -20,7 +20,7 @@
 
     <div class="seg" id="location">
         <h1>Location</h1>
-        <p>The satellite image below shows the area of the mine in <%= mine.location %>
+        <p>The satellite image below shows the area of the mine in <%= mine.Location %>
         </p>
         <div id='map'></div>
     </div>
@@ -62,7 +62,7 @@
             var api_key = 'WikGMXv7qoJhlJj2Ba3Ka60TTpWc2Fwq';
             var latAndLong = { lat: '<%- mine.lat %>', lng: '<%- mine.long%>' };
             var zoomLevel = 14;
-            var yourAddress = '<%- mine.name %>';
+            var yourAddress = '<%- mine.Name %>';
 
             var map = tt.map({
                 container: 'map',
