@@ -18,6 +18,10 @@ app.get("/mines", (req, res) => {
   res.render("mines", { states, mines });
 });
 
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
 app.get("/:id", (req, res) => {
   const { id } = req.params;
   let mine;

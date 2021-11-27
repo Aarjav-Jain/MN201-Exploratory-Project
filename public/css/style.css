@@ -163,6 +163,9 @@ td {
   margin: 10px 0;
 }
 
+#studentDetails {
+  width: 50%;
+}
 /* ================ FOR MAPS ============================= */
 #map {
   height: 500px;

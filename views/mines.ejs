@@ -5,10 +5,23 @@
         <p>Here you can find all mines present in the site sorted according to the States of India</p>
     </div>
 
+    <div class="card">
+        <h3>Contents</h3>
+        <ol>
+            <% for(let i of states){ %>
+                <li>
+                    <a href="#<%= i %>">
+                        <%= i %>
+                    </a>
+                </li>
+                <% } %>
+        </ol>
+    </div>
+
     <div class="minesTable">
         <% for(let i of states){ %>
             <div>
-                <h2>
+                <h2 id="<%= i %>">
                     <%= i %>
                 </h2>
                 <table>
