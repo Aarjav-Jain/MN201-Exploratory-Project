@@ -385,8 +385,8 @@ const mines = [
   {
     id: 15,
     Name: "Mevasa Bauxite Mine",
-    lat: 220.21,
-    long: 690.3,
+    lat: 22.0174659,
+    long: 69.3623001,
     state: "Gujarat",
     geoDetail:
       "Mevasa is a town and former princely state on Saurashtra peninsula in Gujarat, western India.",
