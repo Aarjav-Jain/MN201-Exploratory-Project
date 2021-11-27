@@ -92,10 +92,19 @@ p {
 }
 #right,
 #left {
-  aspect-ratio: 1;
-  width: 30px;
-  opacity: 50%;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2.4rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
   z-index: 1000;
+}
+#left:hover,
+#right:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.7);
 }
 #left {
   position: absolute;
@@ -105,7 +114,7 @@ p {
 #right {
   position: absolute;
   top: 340px;
-  left: 1165px;
+  left: 1150px;
 }
 #colorCards {
   display: flex;
