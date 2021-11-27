@@ -1,0 +1,42 @@
+<%- include('nav',{title:"All Mines"}) %>
+
+    <div class="seg">
+        <h1>All Mines</h1>
+        <p>Here you can find all mines present in the site sorted according to the States of India</p>
+    </div>
+
+    <div class="minesTable">
+        <% for(let i of states){ %>
+            <div>
+                <h2>
+                    <%= i %>
+                </h2>
+                <table>
+                    <tr>
+                        <th>Mine Name</th>
+                        <th>Ore Mined</th>
+                    </tr>
+
+                    <% for(let j of mines){ %>
+                        <% if(j.state==i) { %>
+                            <tr>
+                                <td><a href="/<%=j.id%>">
+                                        <%= j.Name %>
+                                    </a>
+
+                                </td>
+                                <td>
+                                    <%= j.MineralMined %>
+                                </td>
+                            </tr>
+                            <% } %>
+                                <% } %>
+
+                </table>
+            </div>
+            <% } %>
+    </div>
+
+    </body>
+
+    </html>

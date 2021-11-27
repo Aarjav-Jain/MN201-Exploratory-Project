@@ -138,6 +138,31 @@ ul {
   line-height: 25px;
 }
 
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+table th {
+  background-color: rgb(234, 236, 240);
+}
+
+table td {
+  text-align: center;
+  padding: 2px;
+}
+
+table,
+th,
+td {
+  border: 0.5px solid darkgray;
+  border-collapse: collapse;
+}
+
+.minesTable div {
+  margin: 10px 0;
+}
+
 /* ================ FOR MAPS ============================= */
 #map {
   height: 500px;

@@ -36,8 +36,8 @@
         <h1>Mine Details</h1>
         <ul id="ulmargin">
             <% for(let i in mine){ %>
-                <% if(i=='id' || i=='photos' || i=="geoDetail" || i=="background" || i=="url" ||i=="lat" || i=="long"
-                    )continue %>
+                <% if(i=='id' || i=='photos' || i=="geoDetail" || i=="background" || i=="url" ||i=="lat" || i=="long" ||
+                    i=="state" )continue %>
                     <li> <b>
                             <%=i%>:
                         </b>
@@ -61,7 +61,7 @@
         function mapContent() {
             var api_key = 'WikGMXv7qoJhlJj2Ba3Ka60TTpWc2Fwq';
             var latAndLong = { lat: '<%- mine.lat %>', lng: '<%- mine.long%>' };
-            var zoomLevel = 14;
+            var zoomLevel = 10;
             var yourAddress = '<%- mine.Name %>';
 
             var map = tt.map({

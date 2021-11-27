@@ -1,5 +1,5 @@
 const express = require("express");
-const data = require("./data");
+const { states, mines } = require("./data");
 const app = express();
 const path = require("path");
 
@@ -14,10 +14,15 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.get("/mines", (req, res) => {
+  res.render("mines", { states, mines });
+});
+
 app.get("/:id", (req, res) => {
   const { id } = req.params;
   let mine;
-  for (let d of data) {
+
+  for (let d of mines) {
     if (parseInt(id) == d.id) {
       mine = { ...d };
     }
